@@ -34,6 +34,7 @@ class Stauct
   	admin_struct
   	business_info
   end
+
   def mold_struct
   	@mold['企业'] = ''
   	@mold['事业单位'] = ''
@@ -47,6 +48,7 @@ class Stauct
   def company_name_struct
   	@company_name['简称'] = ''
   	@company_name['标准名称'] = ''
+  	@company_name['英文名'] = ''
   	@company_name['正式名称'] = ''
   end
 
