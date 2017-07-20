@@ -8,8 +8,8 @@ class Dow
   def download_html(url)
     begin
       agent = Mechanize.new
+      agent.user_agent_alias = "Mac Mozilla"
 
-      agent.user_agent_alias = "Linux Mozilla"
       html = agent.get(url)
       return html
     rescue Exception=> e
@@ -17,12 +17,12 @@ class Dow
       return "0"
     end
   end
-  # def download(url)
-  #   b = Watir::Browser.new(:chrome)
-  #   # b = Watir::Browser.new(:phantomjs)
-  #   b.goto(url)
-  #   return  b.html
-  # end
+  def download(url)
+    b = Watir::Browser.new(:chrome)
+    # b = Watir::Browser.new(:phantomjs)
+    b.goto(url)
+    return  b.html
+  end
   def download_proxy(url)
     begin
       $proxy_addr = '113.69.38.106'

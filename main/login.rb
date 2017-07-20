@@ -4,8 +4,7 @@ class Login
   def initialize
     @dow = Dow.new
   end
-
-  def go_login(url)
+def go_login(url)
     page = @dow.download_html(url)
     page.forms.each do |form|
       puts form.name('Name')
