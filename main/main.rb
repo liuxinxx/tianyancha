@@ -1,5 +1,5 @@
 #encoding = utf-8
-require '../sup'
+require '../support'
 require 'json'
 require 'pp'
 class Parse
@@ -22,12 +22,12 @@ class Parse
       puts "天眼查开始限制查询！需要登录！"
     else
       html.xpath('//div[@class="col-xs-10 search_repadding2 f18"]/a').each do |div|
-        
+
         txt = div.content.gsub("\n","").gsub(" ","")
         puts txt,key
         if key == txt
           url_details  = div['href']
-          puts "url-->#{url_details}"
+          puts "#{key}-->天眼查页面#{url_details}"
           parse_details(url_details)
           break
         else
@@ -39,8 +39,8 @@ class Parse
 
   def parse_details(url_details)
     html_info = @dow.download_html(url_details)
-    html_info.xpath('//div[@class="row b-c-white base2017"]').each do |td|
-      print td.content.gsub(" ","")
+    html_info.xpath('//div[@class="c8"]').each do |td|
+      puts td.content.gsub(" ","").gsub("\n","")
     end
   end
 
