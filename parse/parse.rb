@@ -1,7 +1,7 @@
 class Parse
 #股票代码和联系方式
 def contact(html_info)
-  puts "\n\n股票代码和联系方式!"
+  puts "\n\n股票代码和联系方式"
   gp = Array.new
   html_info.xpath("/html/body/div[2]/div[1]/div/div/div/div[1]/div[2]/div[2]/div/p").each do |p|
     gp = p.content.gsub(/\s|\n/,"").split(/股|（/)
@@ -28,7 +28,7 @@ end
 
   ##解析企业基本信息，所有企业都有
   def parse_basic_info(html_info)
-    puts "\n\n解析企业基本!"
+    puts "\n\n企业基本信息"
     i = 0
 
     html_info.xpath('//div[@class="row b-c-white base2017"]/table/tbody/tr/td').each do |td|
@@ -69,7 +69,7 @@ end
 
   ##解析企业简介
   def parse_intro(html_info)
-    puts "\n\n企业简介!"
+    puts "\n\n企业简介"
     i=0
     html_info.xpath('//div[@id="nav-main-stockNum"]/*/*/table/tbody/tr/td').each do |tr|
       i+=1
@@ -99,7 +99,7 @@ end
 
   ##解析主要人员
   def parse_admin(html_info)
-    puts "\n\n主要人员！"
+    puts "\n\n主要人员"
     admin = Hash.new
     #获取职务，可能一个职务有多个人,防止hash的自动去重
     h = 0
@@ -134,7 +134,7 @@ end
 
   ##解析股东信息
   def parse_shareholder(html_info)
-    puts "\n\n股东信息！"
+    puts "\n\n股东信息"
     i = 0
     html_info.xpath('//div[@id = "_container_holder"]/*/table[@class="table  companyInfo-table"]/tbody/tr/td').each do |tr|
       i+=1
