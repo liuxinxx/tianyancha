@@ -1,0 +1,86 @@
+上市信息: span[@class = "border-radio2 f13 pl5 pr5 pt3 pb3"]   A股
+股票名称: span[@class = "ml12 f14"] 														爱尔眼科
+股票代码: span[@class = "f16"]	 																(300015)
+电话号码: div [@class = "in-block vertical-top overflow-width mr20"] 电话:0731-82179288
+邮		箱:	 div [@class = "in-block vertical-top"] 										邮箱:暂无
+网		址:		div[@class = "in-block vertical-top overflow-width mr20"]	网址: www.irs-chn.com
+地		址:		div[@class = "in-block vertical-top"]											地址:长沙市芙蓉区长冲路99号隆平高科技园省科研成果转化中心一楼
+
+注册资本：	div[@class = "new-border-bottom"] 注册资本 100717.9414万人民币（无:可以根据空格来）
+注册时间:  	div[@class = "new-border-bottom pt10"] 注册时间 2003-01-24
+企业状态: 	div[@class = "new-c1 pb5"]							企业状态 存续（在营、开业、在册）
+
+
+
+
+基本信息:div[@class = "row b-c-white base2017"]（所有企业都有）
+1-1 td/div 工商注册号：430000000001637
+1-2 td/div 组织机构代码:745928604
+
+2-1 td/div 统一信用代码：91430000745928604G
+2-2 td/div 企业类型： 股份有限公司(上市、自然人投资或控股)
+
+3 	td/div 纳税人识别号：430000745928604
+
+4-1 td/div 行业：卫生
+4-2 td/div 营业期限：2003-01-24至无固定期限
+
+5-1 td/div 核准日期：
+5-2 td/div 2016-07-25
+5-3 td/div 登记机关：
+5-4 td/div 湖南省工商行政管理局
+
+6		td/div 注册地址：长沙市芙蓉区长冲路99号隆平高科技园省科研成果转化中心一楼
+
+7 span[@class = "js-full-container "] 经营范围:
+眼科医院的投资和医院经营管理服务（不得从事吸收存款、集资收款、受托贷款、发行票据、发放贷款等国家金融监管及财政信用业务）；眼科医疗技术的研究，远程医疗软件的研发、生产、销售；眼科、内科、麻醉科、检验科、影视像科、验光配镜。（依法须经批准的项目，经相关部门批准后方可开展经营活动）                        
+
+
+
+
+
+
+企业简介 div[@class = "nav-main-stockNum"]/div/div/table/tr
+1	tr 英文名称： Aier Eye Hospital Group Co.,Ltd.
+2 tr 曾用名：-
+
+3-1 td 所属行业：
+3-2 td 
+3-3 td 主营业务：
+3-4 td 眼科医疗服务与视光医疗服务
+
+4-1 td 董事长：
+4-2 td a  陈邦
+4-3 td 董秘：
+4-4 td a 	吴士君
+
+5-1 td 法人代表：
+5-2 td a  陈邦
+5-3 td 总经理：
+5-4 td a 	李力	
+
+6-1 td 注册资本：
+6-2 td 15.21亿元
+6-3 td 员工人数：
+6-4 td 13071
+
+7-1 td 控股股东：
+7-2 td 爱尔医疗投资集团有限公司 (持有爱尔眼科医院集团股份有限公司股份比例：41.13%）
+
+8-1 td 实际控制人：
+8-2 td 陈邦 (持有爱尔眼科医院集团股份有限公司股份比例：45.59%）
+
+9-1 td 最终控制人：
+9-2 td 陈邦 (持有爱尔眼科医院集团股份有限公司股份比例：45.59%）
+
+
+高管信息 div[@class = "nav-main-seniorExecutiveNum"] 17人
+
+高管具体信息，有多页
+
+tr[@ng-repeat="item in seniorPeople.dataList"]
+
+
+
+
+
