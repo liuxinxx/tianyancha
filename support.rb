@@ -24,7 +24,7 @@ class Dow
       # ip_post = ip_list[random]
       # ip = ip_post[0,ip_post.index(":")]
       # post = ip_post[ip_post.index(":"),ip_post.size]
-      # agent.set_proxy "110.72.19.168",8123
+      agent.set_proxy "110.72.19.168",8123
       # 设置超时
       agent.open_timeout = 10
       agent.user_agent_alias = 'Mac Safari'
