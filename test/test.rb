@@ -1,10 +1,3 @@
-require '../main/stauct'
-
-ss = Stauct.new
-sh = ss.main_stauct
-sh.each do |key,vol|
-	puts key
-	vol.each do |key1,vol1|
-		puts key1,vol1
-	end
-end
+require "open-uri"
+html = open("http://www.baidu.com", :proxy => 'http://110.73.4.19:8123', :read_timeout => 10).read
+p html
