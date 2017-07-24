@@ -57,7 +57,7 @@ end
 
 pas = Main.new
 parse = Parse.new
-file = pas.dow_html("file:///Users/liuxin/RubymineProjects/tianyancha/main/test3.html")
+file = pas.dow_html("file:///Users/liuxin/RubymineProjects/tianyancha/main/test.html")
 
 root = 'https://www.tianyancha.com/search?key='
 pm = '&checkFrom=searchBox'
@@ -68,5 +68,7 @@ parse.parse_admin(file)#解析主要人员
 parse.parse_intro(file)#解析企业简介
 parse.parse_shareholder(file)#解析股东信息
 parse.parse_basic_info(file)#解析企业基本信息，所有企业都有
+parse.parse_publish(file)#发行相关
+parse.parse_financing(file)#融资历史
 # pas.parse_html(url,key)
 
