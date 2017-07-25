@@ -57,7 +57,7 @@ end
 
 pas = Main.new
 parse = Parse.new
-file = pas.dow_html("file:///Users/liuxin/RubymineProjects/tianyancha/main/test.html")
+file = pas.dow_html("file:///Users/liuxin/RubymineProjects/tianyancha/main/test3.html")
 
 root = 'https://www.tianyancha.com/search?key='
 pm = '&checkFrom=searchBox'

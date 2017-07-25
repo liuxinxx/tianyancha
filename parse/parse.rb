@@ -2,6 +2,10 @@ class Parse
   #股票代码和联系方式
   def contact(html_info)
     puts "\n\n股票代码和联系方式"
+
+    html_info.xpath('//span[@class = "f18 in-block vertival-middle"]').each do |c|
+      puts "公司名称:#{c.content}"
+    end
     gp = Array.new
     html_info.xpath("/html/body/div[2]/div[1]/div/div/div/div[1]/div[2]/div[2]/div/p").each do |p|
       gp = p.content.gsub(/\s|\n/,"").split(/股|（/)
@@ -29,6 +33,10 @@ class Parse
   ##解析企业基本信息，所有企业都有
   def parse_basic_info(html_info)
     puts "\n\n企业基本信息"
+    html_info.xpath('//div[@class = "b-c-white new-border over-hide mr10 ie9Style"]/img').each do |img|
+      puts "公司logo:#{img['src']}"
+    end
+
     s = 0
     html_info.xpath('//table[@class = "table companyInfo-table text-center f14"]/tbody/tr/td/div').each do |tr|
       s+=1
@@ -153,10 +161,15 @@ class Parse
     i = 0
     html_info.xpath('//div[@id = "_container_holder"]/*/table[@class="table  companyInfo-table"]/tbody/tr/td').each do |tr|
       i+=1
-      print tr.content.gsub("\n","").gsub(" ","").gsub(/他.*司>/,"")+"   "
-      if i ==3
-        i=0
-        puts
+      str = tr.content.gsub("\n","").gsub(" ","").gsub(/他.*司>/,"")+"   "
+      case i
+      when 1
+        print "股东：#{str}"
+      when 2
+        print  "出资比例：#{str}"
+      when 3
+        puts "认缴出资：#{str}"
+        i = 0
       end
 
     end    

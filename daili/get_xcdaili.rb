@@ -79,10 +79,15 @@ class Get_xici_daili
 		end
 	end
 end
+n = 0
 dali = Get_xici_daili.new
 url = "http://www.xicidaili.com/nn/"
-(1..1000).each do |n|
+while true
+	n+=1
 	puts url+n.to_s
 	dali.parse_ip(url+n.to_s)
-end
+	if n ==4
+		n=0
+	end
+end 
 puts "总共#{$sum}!"
