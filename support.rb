@@ -24,15 +24,15 @@ class Dow
       # ip_post = ip_list[random]
       # ip = ip_post[0,ip_post.index(":")]
       # post = ip_post[ip_post.index(":"),ip_post.size]
-      # agent.set_proxy "110.72.19.168",8123
+      agent.set_proxy "111.126.94.80",808
       # 设置超时
-      agent.open_timeout = 10
+      # agent.open_timeout = 4
       agent.user_agent_alias = 'Mac Safari'
       
       html = agent.get(url)
       return html
     rescue Exception=> e
-      puts "出现异常:"+e.message+"#{url}该链接无法抓取"
+      puts "出现异常:~~"+e.message+"~~#{url}该链接无法抓取"
       # ip_list.delete(ip_post)
       return "0"
     end

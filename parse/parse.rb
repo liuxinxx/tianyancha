@@ -33,54 +33,57 @@ class Parse
   ##解析企业基本信息，所有企业都有
   def parse_basic_info(html_info)
     puts "\n\n企业基本信息"
-    html_info.xpath('//div[@class = "b-c-white new-border over-hide mr10 ie9Style"]/img').each do |img|
-      puts "公司logo:#{img['src']}"
+    # html_info.xpath('//div[@class = "b-c-white new-border over-hide mr10 ie9Style"]/img').each do |img|
+    #   puts "公司logo:#{img['src']}"
+    # end
+    html_info.xpath('//div[@class = "new-c3 f18 overflow-width"]/a').each do |a|
+      puts "法人信息:#{a['title']}"
     end
-
     s = 0
     html_info.xpath('//table[@class = "table companyInfo-table text-center f14"]/tbody/tr/td/div').each do |tr|
       s+=1
       str = tr.content.gsub(/\n|\s/,"")
       case s 
-      when 1
-        puts "法人信息:#{str.gsub(/他.*/,"")}"
-      when 2
-        puts "注册资本:#{str.gsub("注册资本","")}"
-      when 3
-        puts "注册时间:#{str.gsub("注册时间","")}"
-      when 4
-        puts "企业状态:#{str.gsub("企业状态","")}"
-      end
+      # when 2
+      #   puts "法人信息:#{str.gsub(/他.*/,"")}"
+    when 2
+      puts "注册资本:#{str.gsub("注册资本","")}"
+    when 3
+      puts "注册时间:#{str.gsub("注册时间","")}"
+    when 4
+      puts "企业状态:#{str.gsub("企业状态","")}"
+    else
     end
-    i = 0
+  end
+  i = 0
 
-    html_info.xpath('//div[@class="row b-c-white base2017"]/table/tbody/tr/td').each do |td|
-      i+=1
-      str = td.content.gsub("\n","").gsub(" ","").split("：")
-      case i
-      when 1
-        puts "工商注册号:#{str[1]}"
-      when 2
-        puts "组织机构代码:#{str[1]}"
-      when 4
-        puts "统一信用代码:#{str[1]}"
-      when 5
-        puts "企业类型:#{str[1]}"
-      when 6
-        puts "纳税人识别号:#{str[1]}"
-      when 7
-        puts "行业:#{str[1]}"
-      when 8
-        puts "营业期限:#{str[1]}"
-      when 9
-        puts "核准日期:#{str[1]}"
-      when 10
-        puts "登记机关:#{str[1]}"
-      when 11
-        puts "注册地址:#{str[1]}"
-      when 12
-        puts "经营范围:#{str[1]}"
-      end
+  html_info.xpath('//div[@class="row b-c-white base2017"]/table/tbody/tr/td').each do |td|
+    i+=1
+    str = td.content.gsub("\n","").gsub(" ","").split("：")
+    case i
+    when 1
+      puts "工商注册号:#{str[1]}"
+    when 2
+      puts "组织机构代码:#{str[1]}"
+    when 4
+      puts "统一信用代码:#{str[1]}"
+    when 5
+      puts "企业类型:#{str[1]}"
+    when 6
+      puts "纳税人识别号:#{str[1]}"
+    when 7
+      puts "行业:#{str[1]}"
+    when 8
+      puts "营业期限:#{str[1]}"
+    when 9
+      puts "核准日期:#{str[1]}"
+    when 10
+      puts "登记机关:#{str[1]}"
+    when 11
+      puts "注册地址:#{str[1]}"
+    when 12
+      puts "经营范围:#{str[1]}"
+    end
       # puts "#{i.to_s}:#{td.content.gsub("\n","").gsub(" ","")}"
     end
   end
