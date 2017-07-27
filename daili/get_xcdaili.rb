@@ -47,6 +47,8 @@ class Get_xici_daili
 	def html(url)
 		begin
 			agent = Mechanize.new
+			# 设置超时
+      agent.open_timeout = 2
 			agent.user_agent_alias = 'Mac Safari'
 			html = agent.get(url)
 			return html
@@ -58,7 +60,7 @@ class Get_xici_daili
 
 	#保存ip到daili.csv
 	def save_daili(ip_post)
-		file = File.new("daili_pro.csv","ab+")
+		file = File.new("puls_pro.csv","ab+")
 		file.syswrite(ip_post)
 		file.close
 	end
@@ -70,7 +72,10 @@ class Get_xici_daili
 		begin
 			agent = Mechanize.new
 			agent.set_proxy ip,post
-			agent.get('http://www.baidu.com')
+			# 设置超时
+      agent.open_timeout = 2
+			agent.get('https://www.tianyancha.com/search?key=爱尔眼科医院集团股份有限公司&checkFrom=searchBox')
+			
 			putss "此代理可用！"
 			return true
 		rescue Exception => e
